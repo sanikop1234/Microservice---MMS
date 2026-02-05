@@ -66,4 +66,7 @@ Refer to the `/docs` folder for:
 - Design trade-offs
 
 ## Presentation
-The PowerPoint presentation used during the interview explains the architecture and design decisions in detail.
+The PowerPoint presentation used during the interview explains the architecture and design decisions in detail.[Machine_Maintenance_Scheduler_Presentation.pptx](https://github.com/user-attachments/files/25098370/Machine_Maintenance_Scheduler_Presentation.pptx)
+
+
+
