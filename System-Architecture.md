@@ -1,5 +1,19 @@
 # Architecture
-<img width="1536" height="1024" alt="Image Feb 4, 2026, 08_05_57 PM" src="https://github.com/user-attachments/assets/ecc174df-1647-48bf-8634-ba248a9418b9" />
+
+
+
+
+
+
+<img width="1536" height="1024" alt="Architecture" src="https://github.com/user-attachments/assets/108f142a-5e2c-460f-82de-e5dfe25f6dbe" />
+
+
+
+
+
+
+
+
 
 The Machine Maintenance Scheduler follows a microservice-based architecture to ensure scalability, clear responsibility boundaries, and ease of future enhancements.
 
