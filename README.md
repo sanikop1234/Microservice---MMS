@@ -11,3 +11,72 @@ Times when a solution's high-availability guarantee was a nice feature to have a
 
 # Architecture
 <img width="1536" height="1024" alt="Image Feb 4, 2026, 08_05_57 PM" src="https://github.com/user-attachments/assets/ecc174df-1647-48bf-8634-ba248a9418b9" />
+
+The Machine Maintenance Scheduler follows a microservice-based architecture to ensure scalability, clear responsibility boundaries, and ease of future enhancements.
+
+# Frontend (Web UI)
+
+The frontend provides a simple dashboard for users to:
+
+* View machine maintenance status
+
+* Monitor upcoming and completed maintenance tasks
+
+It communicates with backend services through REST APIs and does not directly access any databases.
+
+# API Gateway (Logical Layer)
+
+The API Gateway acts as a single entry point for the frontend. It routes incoming requests to the appropriate backend microservice, helping in request isolation and future concerns such as authentication and rate limiting.
+
+# Machine Service
+This service is responsible for managing machine-related data such as:
+
+* Machine metadata
+
+* Last maintenance date
+
+* Maintenance interval
+
+The current machine status (Operational, Needs Maintenance, Under Maintenance) is derived based on maintenance data rather than being manually updated, ensuring data consistency.
+
+# Maintenance Scheduler Service
+
+The Scheduler Service contains the core business logic for maintenance planning. It:
+
+* Calculates the next maintenance due date using the last maintenance date and maintenance interval
+
+* Periodically checks for machines that are due for maintenance
+
+* Triggers creation of maintenance tasks when required
+
+This service can be triggered by a scheduled job or an event-based mechanism.
+
+# Task Management Service
+
+The Task Service manages the complete lifecycle of maintenance tasks:
+
+* Task creation
+
+* Status transitions (Scheduled → In Progress → Completed)
+
+* Maintenance history storage
+
+On task completion, it updates maintenance records and closes the maintenance loop.
+
+# Inter-Service Communication
+
+* Services communicate using REST APIs
+
+* Optional event-based notifications can be used for loose coupling (e.g., task completion events)
+
+Each service owns its database and does not directly access another service’s data store.
+
+# Key Architectural Benefits
+
+* Independent scaling of services
+
+* Improved fault isolation
+
+* Clear separation of concerns
+
+* Easier maintenance and extensibility
