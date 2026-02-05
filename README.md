@@ -1,6 +1,6 @@
 # Microservice---MMS
 
-Introduction
+# Introduction
 
 Nowadays many companies are basing their applications and solutions on microservices architecture. One of the main benefits of this approach is that it allows splitting a solution into a number of loosely coupled software components (microservices). These software components might have their own release and life cycles, and even development teams. Moreover, these software blocks might even be developed and maintained using different languages and technologies. However, since all the microservices are intended to be a part of something bigger (the application or solution) they always have at least one mechanism for interacting and exchanging data with each other.
 
