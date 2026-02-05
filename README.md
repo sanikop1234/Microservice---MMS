@@ -10,7 +10,7 @@ Nowadays, many enterprise applications are built using a microservices architect
 The Machine Maintenance Scheduler (MMS) applies these microservice principles in a real-world manufacturing use case. MMS is designed as a collection of independent services responsible for machine management, maintenance scheduling, and task lifecycle handling. By adopting this approach, the system improves scalability, fault isolation, and maintainability, while ensuring high availability and reliable performance as data volume and system load grow.
 
 ## Problem Statement
-Manual maintenance tracking leads to missed schedules, unplanned downtime, and poor maintenance traceability.
+A microservice-based Machine Maintenance Scheduler combines automated scheduling with a clean web dashboard to reduce downtime and improve maintenance visibility.
 
 ## Objective
 Build a robust web application that:
