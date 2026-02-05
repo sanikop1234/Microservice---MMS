@@ -9,5 +9,5 @@ At the same time, microservice-based solutions that are used under high-load or 
 Disk-backed databases can no longer keep up with growing volumes of data that has to be stored and processed in parallel. Databases are becoming a performance bottleneck affecting the overall solution/application.
 Times when a solution's high-availability guarantee was a nice feature to have are becoming a thing of the past. Today, high-availability of an application is becoming a de-facto requiremen
 
-Architecture
+# Architecture
 <img width="1536" height="1024" alt="Image Feb 4, 2026, 08_05_57 PM" src="https://github.com/user-attachments/assets/ecc174df-1647-48bf-8634-ba248a9418b9" />
